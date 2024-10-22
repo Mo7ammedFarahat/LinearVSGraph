@@ -60,7 +60,14 @@ FASTQ1=/cbio/projects/037/gerrit/1kg/fastq/SAMN01090776/SAMN01090776_R1.fastq.gz
 FASTQ2=/cbio/projects/037/gerrit/1kg/fastq/SAMN01090776/SAMN01090776_R2.fastq.gz
 SAMPLE_ID=SAMN01090776
 ```
-Modify that section with the your sample paths. then submit it like that:
+Modify that section with the your sample paths. 
+You need also to modify the first line in the script `-D` here
+```
+#!/bin/bash
+#SBATCH -D /path/to/your/working/directory
+```
+Now, submit it like that:
+
 ```
 sbatch wgs_align_baylor30x27_graph_call_DeepVariant.sbatch
 ```
