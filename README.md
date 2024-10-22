@@ -1,5 +1,13 @@
 # African Pangenome BYOD Workshop, Cape Town 21st-25th Oct,2024.
 
+It's prefered to open a tmux session before submit the job, like
+```
+tmux new-session -t compare
+```
+So if you lost the terminal and the connection is closed you can reattach that session again using:
+```
+tmux attach-session -t compare
+```
 # LinearVSGraph
 
 **Scripts Dir**
