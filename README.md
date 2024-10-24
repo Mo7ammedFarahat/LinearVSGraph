@@ -137,3 +137,13 @@ VCF_LINEAR=/cbio/projects/037/gerrit/examples/SAMN00000499.pass.vcf.gz
 VCF_GRAPH=SAMN00000499_Baylor30x27_surject_hg38_PASS_rename_chrs.dv.vcf.gz
 ```
 Submit the script.
+
+What are the results you got? did you get some statistics and differences?!
+
+<display>
+<summary>The output files:</summary>
+  * Unique high quality variants?
+  * Annotated variantss?
+  * Number of variants per gene?
+  * High and moderate impact variants.
+</display>
