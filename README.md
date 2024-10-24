@@ -140,10 +140,10 @@ Submit the script.
 
 What are the results you got? did you get some statistics and differences?!
 
-<display>
+<details>
 <summary>The output files:</summary>
   * Unique high quality variants?
   * Annotated variantss?
   * Number of variants per gene?
   * High and moderate impact variants.
-</display>
+</details>
