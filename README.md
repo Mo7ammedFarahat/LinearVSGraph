@@ -141,9 +141,11 @@ Submit the script.
 What are the results you got? did you get some statistics and differences?!
 
 <details>
-<summary>The output files:</summary>
+<summary>The output files:</summary>  
+  
 - Unique high quality variants?
 - Annotated variants?
 - Number of variants per gene?
 - High and moderate impact variants.
+
 </details>
