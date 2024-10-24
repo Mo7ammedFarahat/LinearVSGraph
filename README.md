@@ -142,8 +142,8 @@ What are the results you got? did you get some statistics and differences?!
 
 <details>
 <summary>The output files:</summary>
-  * Unique high quality variants?
-  * Annotated variantss?
-  * Number of variants per gene?
-  * High and moderate impact variants.
+ * Unique high quality variants?
+ * Annotated variantss?
+ * Number of variants per gene?
+ * High and moderate impact variants.
 </details>
