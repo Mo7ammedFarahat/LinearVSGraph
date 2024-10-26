@@ -8,9 +8,8 @@ We have built our pangenome beforehand from 27 samples `HiFi Long reads with 30x
   <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/General_Workflow.png" alt="Diagram" width="500">
 </p>
 
-As you see, the workflow designed to do raw reads QC, assemblies and assemblies QC. It also recording tools' versions since it pulls `docker images` with latest versions in every run.
+As you see, the workflow designed to do raw reads QC, assemblies and assemblies QC. It also recording tools' versions since it pulls `docker images` with latest versions in every run. After assemblies, we built the pangenome graph using `Mini-graph Cactus`.
 
-After assemblies, we built the pangenome graph using `Mini-graph Cactus`.
 ---
 
 # LinearVSGraph
@@ -180,7 +179,7 @@ The following Venn diagram shows the number of variants in both approaches for o
 
 
 <details>
-<summary>Can you visualize genes of interest?:</summary>  
+<summary>Can you visualize genes of interest? Click here</summary>  
   
 - You can use this [script](https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/gene-cord.sh) to get the coordinates of your gene.
 - Open IGV and compare the results in both approaches.
