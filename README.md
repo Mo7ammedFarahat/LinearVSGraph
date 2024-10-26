@@ -1,5 +1,21 @@
 # African Pangenome BYOD Workshop, Cape Town 21st-25th Oct,2024.
 
+# Background:
+
+We have built our pangenome beforehand from 27 samples `HiFi Long reads with 30x coverage`, using a the workflow that we developed in [WDL](https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md). 
+
+<p align="center">
+  <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/General_Workflow.png" alt="Diagram" width="500">
+</p>
+
+As you see, the workflow designed to do raw reads QC, assemblies and assemblies QC. It also recording tools' versions since it pulls `docker images` with latest versions in every run.
+
+After assemblies, we built the pangenome graph using `Mini-graph Cactus`.
+---
+
+# LinearVSGraph
+
+
 It's prefered to open a tmux session before submit the job, like
 ```
 tmux new-session -t compare
@@ -12,7 +28,11 @@ To reattach that session again using:
 ```
 tmux attach-session -t compare
 ```
-# LinearVSGraph
+
+
+<p align="center">
+  <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/Compare.png" alt="Diagram" width="500">
+</p>
 
 **Scripts Dir**
 ```
@@ -138,7 +158,6 @@ VCF_GRAPH=SAMN00000499_Baylor30x27_surject_hg38_PASS_rename_chrs.dv.vcf.gz
 ```
 Submit the script.
 
-What are the results you got? did you get some statistics and differences?!
 
 <details>
 <summary>The output files:</summary>  
@@ -149,3 +168,40 @@ What are the results you got? did you get some statistics and differences?!
 - High and moderate impact variants.
 
 </details>
+
+
+What are the results you got? did you get some statistics and differences? Interesting?!  
+The following Venn diagram shows the number of variants in both approaches for one of our samples 'MND_G161.1ABD` *Neurogenomics Lab. UCT*, There is a big overlap between 'hg38 linear' alignment vs 'CHM13 13 graph' surjected to hg30.bam *(to be comparable)*. There is a number of unique variants in the graph that are not represented in the linear reference, and some variants in linear are not in the graph.
+ 
+
+<p align="center">
+  <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/Venn.png" alt="Venn" width="500">
+</p>
+
+
+<details>
+<summary>Can you visualize genes of interest?:</summary>  
+  
+- You can use this [script](https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/gene-cord.sh) to get the coordinates of your gene.
+- Open IGV and compare the results in both approaches.
+
+Here is an example of the results of the same sample for 'CBS` and `HLA-DRB5` genes in both approaches.
+
+Info: As you know there are genes that are falsly duplicated/collapsed in `hg38` which are resolved in `CHM13`, one of these genes is `CBS` which is falsly duplicated in `hg38`, as you see in the following figure the mapping quality difference between the linear and the graph. Since falsly duplicated regions leads to multi-mapping problems. 
+
+<p align="center">
+  <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/CBS.png" alt="CBS" width="500">
+</p>
+
+---
+
+For 'HLA-DRB5` gene which known as highly polymorphic, the mapping quality are equal in both approaches, however there is a difference between the coverage in both approaches.
+
+<p align="center">
+  <img src="https://github.com/Mo7ammedFarahat/LinearVSGraph/blob/main/images/HLA.png" alt="HLA" width="500">
+</p
+
+</details>
+
+Now, it's the time to play around your data and discover more interesting findings.
+
